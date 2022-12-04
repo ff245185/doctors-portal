@@ -9,7 +9,11 @@ const AppoipmentOption = ({ appoipment,settrightment}) => {
                 <p>{slots.length > 0 ? slots[0] : "try another day"}</p>
                 <p>{slots.length > 0 ? 'spaces' : 'space'}</p>
                 <div className="card-actions justify-center">
-                 <label htmlFor="booking-modal" className="btn btn-primary" onClick={() =>settrightment(appoipment)}>open Appoipnments</label>
+                 <label
+                 disabled={slots.length === 0}
+                  htmlFor="booking-modal" className="btn btn-primary"
+                   onClick={() =>settrightment(appoipment)}>
+                    open Appoipnments</label>
                 </div>
             </div>
         </div>

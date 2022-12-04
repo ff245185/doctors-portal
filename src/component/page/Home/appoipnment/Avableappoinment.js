@@ -29,8 +29,8 @@ const Avableappoinment = ({selecteded}) => {
                }
             </div>
           { trightment &&
-            <Backmodel>
-                {trightment}
+            <Backmodel  trightment={trightment} selecteded={selecteded}>
+                
                 </Backmodel>
                 }
         </div>
