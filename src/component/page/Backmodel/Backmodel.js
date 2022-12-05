@@ -3,6 +3,7 @@ import React from 'react';
 
 const Backmodel = ({trightment,selecteded}) => {
     const {name,slots} = trightment;
+    console.log(name);
     const date = format(selecteded, 'PP')
 
 const handleinfo = (event) =>{
@@ -10,8 +11,8 @@ const handleinfo = (event) =>{
        
 
     const form = event.target
-    const slots = form.slots.value
-    const name = form.name.value
+    // const slots = form.slots.value
+    // const name = form.name.value
     const email= form.email.value
     const phon = form.phon.value
 

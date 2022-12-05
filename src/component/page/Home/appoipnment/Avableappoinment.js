@@ -6,7 +6,7 @@ import AppoipmentOption from './AppoipmentOption';
 
 const Avableappoinment = ({selecteded}) => {
     const [appoipmentOption, setappoipmentOption] = useState([])
-    const [trightment , settrightment] = useState(null);
+    const [trightment , settrightment]= useState(null);
 
     useEffect(()=>{
         fetch('appoipmentOption.json')
