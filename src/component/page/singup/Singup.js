@@ -6,7 +6,7 @@ import { AuthContex } from '../../../Contex/Authprovider';
 
 const Singup = () => {
     const { handleSubmit, register, formState: { errors } } = useForm();
-    const { createuser} = useContext(AuthContex)
+    const { createuser} = useContext(AuthContex);
 
     const handlesingup = data => {
         console.log(data);
@@ -52,11 +52,11 @@ const Singup = () => {
                     })} className="input input-bordered input-primary w-full max-w-xs" />
                 </div>
                 <br />
-                <input className='btn btn-accent w-full' type="submit" value="Login" />
+                <input className='btn btn-accent w-full' type="submit" value="Sining" />
 
 
             </form>
-            <p>alrady have an account <Link className='text-primary' to='/login'>Login</Link></p>
+            <p>alrady have an account <Link className='text-primary' to='/login'>account</Link></p>
             <div className="divider">OR</div>
             <button><Link className='btn btn-outline w-full'>coutinew white google</Link></button>
         </div>
