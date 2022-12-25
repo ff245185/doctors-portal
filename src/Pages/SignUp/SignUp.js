@@ -8,9 +8,9 @@ const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
-    const nagative = useNavigate();
+    const navigate = useNavigate();
+
     const handleSignUp = (data) => {
-        console.log(data);
         setSignUPError('');
         createUser(data.email, data.password)
             .then(result => {
@@ -21,7 +21,9 @@ const SignUp = () => {
                     displayName: data.name
                 }
                 updateUser(userInfo)
-                    .then(() => { nagative() })
+                    .then(() => {
+                        navigate('/');
+                     })
                     .catch(err => console.log(err));
             })
             .catch(error => {
